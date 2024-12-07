@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Prefabs/Levels/NumberTiles/NumberTile.tscn" type="PackedScene" id=1]
+
+[node name="Numbers" type="Node"]
+
+[node name="NumberTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, -32 )
+
+[node name="NumberTile2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, -128 )
+
+[node name="NumberTile3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, -224 )
+
+[node name="NumberTile4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, -320 )
+
+[node name="NumberTile5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 800, -416 )

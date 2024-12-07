@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Levels/LevelLoader.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/UI/TextManager.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Prefabs/Sounds/Sounds.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/ConversationBox.tscn" type="PackedScene" id=5]
+
+[node name="LevelLoader" type="Node"]
+script = ExtResource( 1 )
+
+[node name="HUD" parent="." instance=ExtResource( 2 )]
+
+[node name="LevelPopup" type="PopupDialog" parent="."]
+visible = true
+margin_left = 490.0
+margin_top = 322.0
+margin_right = 744.0
+margin_bottom = 410.0
+
+[node name="Label" type="Label" parent="LevelPopup"]
+margin_left = 18.0
+margin_top = 12.0
+margin_right = 228.0
+margin_bottom = 26.0
+text = "Which level do you want to load?"
+
+[node name="LevelInput" type="LineEdit" parent="LevelPopup"]
+margin_left = 35.0
+margin_top = 41.0
+margin_right = 124.0
+margin_bottom = 67.0
+custom_colors/selection_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+align = 1
+clear_button_enabled = true
+placeholder_text = "Level"
+
+[node name="ConfirmButton" type="Button" parent="LevelPopup"]
+margin_left = 146.0
+margin_top = 44.0
+margin_right = 216.0
+margin_bottom = 64.0
+text = "confirm"
+
+[node name="TextManager" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="ConversationBox" parent="TextManager" instance=ExtResource( 5 )]
+visible = false
+
+[node name="Sounds" parent="." instance=ExtResource( 4 )]
+
+[node name="VolumeTween" type="Tween" parent="."]

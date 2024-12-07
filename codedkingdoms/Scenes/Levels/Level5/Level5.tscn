@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Levels/LevelBluePrint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Prefabs/GrandWizard/GrandWizard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Levels/Level_6/Level6.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Levels/Level5/Map.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Levels/Level5/Checkpoints.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Levels/Level5/Numbers.tscn" type="PackedScene" id=6]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource( 3 )
+top_limit = -736
+right_limit = 1120
+
+[node name="BaseLevel" parent="." instance=ExtResource( 1 )]
+
+[node name="Checkpoints" parent="." instance=ExtResource( 5 )]
+
+[node name="Map" parent="." instance=ExtResource( 4 )]
+
+[node name="Numbers" parent="." instance=ExtResource( 6 )]
+
+[node name="GrandWizard" parent="." instance=ExtResource( 2 )]

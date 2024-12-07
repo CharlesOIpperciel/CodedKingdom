@@ -1,0 +1,96 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_02.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_07.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_06.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_05.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_03.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_05.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_04.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_02.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_06.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_01.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_03.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Sounds/SFX_Jump/SFX_Jump_Player_07.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Tile_04.wav" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Sounds/Death_player/SFX_Death_Player_02.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Sounds/Death_player/SFX_Death_Player_03.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Sounds/Death_player/SFX_Death_Player_04.wav" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/Sounds/Sounds.gd" type="Script" id=18]
+[ext_resource path="res://Assets/Sounds/Death_player/SFX_Bodyfall_Player_01.wav" type="AudioStream" id=19]
+
+[node name="Sounds" type="Node"]
+script = ExtResource( 18 )
+
+[node name="Footstep1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 15.0
+
+[node name="Footstep2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 15.0
+
+[node name="Footstep3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = 15.0
+
+[node name="Footstep4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = 15.0
+
+[node name="Footstep5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 15.0
+
+[node name="Footstep6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 15.0
+
+[node name="Footstep7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 15.0
+
+[node name="Jump1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 15.0
+
+[node name="Jump2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 15.0
+
+[node name="Jump3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 15.0
+
+[node name="Jump4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = 15.0
+
+[node name="Jump5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 15.0
+
+[node name="Jump6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = 15.0
+
+[node name="Jump7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = 15.0
+
+[node name="Death1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = 15.0
+
+[node name="Death2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = 15.0
+
+[node name="Death3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = 15.0
+
+[node name="Death4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = 15.0

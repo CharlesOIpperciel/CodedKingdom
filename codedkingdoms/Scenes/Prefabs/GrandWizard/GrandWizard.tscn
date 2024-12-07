@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Player/NPC_Tutorial.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Levels/Level_1/GrandWizard_Level1.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[node name="GrandWizard" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 200, -48 )
+frames = SubResource( 1 )
+animation = "Idle"
+playing = true

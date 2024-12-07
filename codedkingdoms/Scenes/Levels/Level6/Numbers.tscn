@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Prefabs/Levels/NumberTiles/NumberTile.tscn" type="PackedScene" id=1]
+
+[node name="Numbers" type="Node"]
+
+[node name="NumberTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, -32 )
+value = -1
+
+[node name="NumberTile2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, -128 )
+value = 1
+
+[node name="NumberTile3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 480, -128 )
+value = 1
+
+[node name="NumberTile4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, -224 )
+value = -1
+
+[node name="NumberTile5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, -224 )
+value = -1
+
+[node name="NumberTile6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -320 )
+value = 1
+
+[node name="NumberTile7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 480, -320 )
+value = 1
+
+[node name="NumberTile8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, -416 )
+value = -1
+
+[node name="NumberTile9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, -416 )
+value = 1
+
+[node name="NumberTile10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, -416 )
+value = 1
+
+[node name="NumberTile11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, -512 )
+value = -1
+
+[node name="NumberTile12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, -512 )
+value = 1
+
+[node name="NumberTile13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 576, -512 )
+value = 1
+
+[node name="NumberTile14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -608 )
+value = 1
+
+[node name="NumberTile15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, -608 )
+value = 1
+
+[node name="NumberTile16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, -704 )
+value = 1
+
+[node name="NumberTile17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, -800 )

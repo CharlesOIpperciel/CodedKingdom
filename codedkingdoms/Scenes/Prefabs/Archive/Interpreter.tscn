@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Interpreter/Interpreter.py" type="Script" id=1]
+[ext_resource path="res://Scripts/Interpreter/ExecuteCodeButton.gd" type="Script" id=2]
+
+[node name="Interpreter" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextEditor" type="TextEdit" parent="."]
+margin_right = 788.0
+margin_bottom = 438.0
+
+[node name="ExecuteCode" type="Button" parent="."]
+margin_left = 802.0
+margin_top = 370.0
+margin_right = 917.0
+margin_bottom = 415.0
+script = ExtResource( 2 )
+
+[connection signal="button_up" from="ExecuteCode" to="ExecuteCode" method="_on_Button_button_up"]

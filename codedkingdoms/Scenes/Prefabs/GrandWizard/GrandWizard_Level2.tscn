@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Levels/Level_2/GrandWizard_Level2.gd" type="Script" id=1]
+
+[node name="GrandWizard_Level3" type="Node"]
+script = ExtResource( 1 )

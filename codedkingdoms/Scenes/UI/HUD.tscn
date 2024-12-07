@@ -1,0 +1,598 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://Assets/GameUI/Editor/NewEditor.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GameUI/Editor/SliderNormal.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/UI/TextEdit.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Font/JetBrainsMono-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Scenes/UI/TooltipTheme.tres" type="Theme" id=5]
+[ext_resource path="res://Assets/GameUI/Editor/StopButton.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameUI/Editor/StopButtonDisabled.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameUI/Journal/Journal.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/UI/HUD_V2.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Font/alagard.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/GameUI/ExceptionCaught/ExceptionCaught.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Font/RetroGaming.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Scripts/UI/ExceptionCaught.gd" type="Script" id=13]
+[ext_resource path="res://Assets/GameUI/Validation/ValidationPanel.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GameUI/Validation/Accept.png" type="Texture" id=15]
+[ext_resource path="res://Assets/GameUI/Validation/AcceptClicked.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Minimap/Minimap.gd" type="Script" id=17]
+[ext_resource path="res://Assets/GameUI/Validation/CancelClicked.png" type="Texture" id=18]
+[ext_resource path="res://Assets/GameUI/Minimap/MinimapGrid.png" type="Texture" id=19]
+[ext_resource path="res://Assets/GameUI/Minimap/checkpoint marker.png" type="Texture" id=20]
+[ext_resource path="res://Assets/GameUI/Validation/Cancel.png" type="Texture" id=21]
+[ext_resource path="res://Assets/GameUI/Minimap/Minimap press.png" type="Texture" id=22]
+[ext_resource path="res://Assets/GameUI/Minimap/MinimapWithButtons.png" type="Texture" id=23]
+[ext_resource path="res://Assets/GameUI/Minimap/minimap normal.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Player/MC_Face.png" type="Texture" id=25]
+[ext_resource path="res://Scripts/UI/TutorialGlows.gd" type="Script" id=26]
+[ext_resource path="res://Scenes/Prefabs/Levels/TutorialGlow.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Assets/GameUI/Minimap/PanLeftClicked.png" type="Texture" id=28]
+[ext_resource path="res://Assets/GameUI/Minimap/PanRightNormal.png" type="Texture" id=29]
+[ext_resource path="res://Assets/GameUI/Minimap/PanLeftNormal.png" type="Texture" id=30]
+[ext_resource path="res://Assets/GameUI/Minimap/PanRightClicked.png" type="Texture" id=31]
+[ext_resource path="res://Assets/GameUI/Minimap/PanLeftDisabled.png" type="Texture" id=32]
+[ext_resource path="res://Assets/GameUI/Minimap/PanRightDisabled.png" type="Texture" id=33]
+[ext_resource path="res://Assets/GameUI/Minimap/PanUpNormal.png" type="Texture" id=34]
+[ext_resource path="res://Assets/GameUI/Minimap/PanUpClicked.png" type="Texture" id=35]
+[ext_resource path="res://Assets/GameUI/Minimap/PanUpDisabled.png" type="Texture" id=36]
+[ext_resource path="res://Assets/GameUI/Minimap/PanDownDisabled.png" type="Texture" id=37]
+[ext_resource path="res://Assets/GameUI/Minimap/PanDownNormal.png" type="Texture" id=38]
+[ext_resource path="res://Assets/GameUI/Minimap/PanDownClicked.png" type="Texture" id=39]
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 416, 480 )
+
+[sub_resource type="Theme" id=11]
+Panel/styles/panel = SubResource( 10 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 13
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="Theme" id=9]
+TextEdit/fonts/font = SubResource( 8 )
+TextEdit/styles/focus = SubResource( 19 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 431, 126, 38, 18 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 479, 126, 38, 18 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 527, 126, 38, 18 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 431, 158, 39, 18 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 479, 158, 38, 18 )
+
+[sub_resource type="StyleBoxTexture" id=40]
+texture = ExtResource( 8 )
+region_rect = Rect2( 440, 0, 460, 479 )
+margin_left = 157.035
+margin_right = 38.8075
+
+[sub_resource type="Theme" id=41]
+Panel/styles/panel = SubResource( 40 )
+
+[sub_resource type="DynamicFont" id=42]
+font_data = ExtResource( 12 )
+
+[sub_resource type="Theme" id=22]
+Panel/styles/panel = SubResource( 40 )
+
+[sub_resource type="DynamicFont" id=28]
+extra_spacing_top = 1
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0.129412, 0.2, 0.415686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+content_margin_left = 34.0
+content_margin_right = 34.0
+bg_color = Color( 0.129412, 0.2, 0.415686, 1 )
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color( 0.0156863, 0.054902, 0.176471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+content_margin_left = 34.0
+content_margin_right = 34.0
+bg_color = Color( 0.0156863, 0.054902, 0.176471, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.129412, 0.2, 0.415686, 1 )
+shadow_color = Color( 1, 1, 1, 1 )
+shadow_size = 3
+
+[sub_resource type="Theme" id=32]
+TabContainer/colors/font_color_bg = Color( 1, 1, 1, 1 )
+TabContainer/colors/font_color_fg = Color( 1, 1, 1, 1 )
+TabContainer/constants/hseparation = 0
+TabContainer/constants/side_margin = 0
+TabContainer/fonts/font = SubResource( 28 )
+TabContainer/styles/panel = SubResource( 29 )
+TabContainer/styles/tab_bg = SubResource( 30 )
+TabContainer/styles/tab_fg = SubResource( 31 )
+
+[sub_resource type="Theme" id=23]
+
+[sub_resource type="Theme" id=20]
+VBoxContainer/constants/separation = 4
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0.0588235, 0.0941176, 0.94902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=44]
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 8 )
+region_rect = Rect2( 160, 432, 48, 48 )
+
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 8 )
+region_rect = Rect2( 160, 432, 48, 48 )
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 8 )
+region_rect = Rect2( 224, 432, 48, 48 )
+
+[sub_resource type="DynamicFont" id=45]
+size = 14
+font_data = ExtResource( 4 )
+
+[sub_resource type="Theme" id=27]
+Button/styles/hover = SubResource( 24 )
+Button/styles/normal = SubResource( 25 )
+Button/styles/pressed = SubResource( 26 )
+TooltipLabel/colors/font_color = Color( 0.0823529, 0.0901961, 0.113725, 1 )
+TooltipLabel/fonts/font = SubResource( 45 )
+
+[sub_resource type="StyleBoxTexture" id=33]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 613, 128 )
+
+[sub_resource type="Theme" id=34]
+Panel/styles/panel = SubResource( 33 )
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.129412, 0.2, 0.415686, 1 )
+
+[sub_resource type="Theme" id=38]
+Label/styles/normal = SubResource( 37 )
+
+[sub_resource type="DynamicFont" id=39]
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxTexture" id=48]
+texture = ExtResource( 8 )
+region_rect = Rect2( 32, 432, 48, 48 )
+
+[sub_resource type="StyleBoxTexture" id=49]
+texture = ExtResource( 8 )
+region_rect = Rect2( 32, 432, 48, 48 )
+
+[sub_resource type="StyleBoxTexture" id=50]
+texture = ExtResource( 8 )
+region_rect = Rect2( 96, 432, 48, 48 )
+
+[sub_resource type="Theme" id=47]
+Button/styles/hover = SubResource( 48 )
+Button/styles/normal = SubResource( 49 )
+Button/styles/pressed = SubResource( 50 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -416, 191 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "slide_panel_in_the_game"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -416, 191 ), Vector2( 0, 191 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "slide_panel_out_the_game"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Panel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 191 ), Vector2( -416, 191 ) ]
+}
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = -416.0
+margin_top = 191.0
+margin_bottom = 671.0
+theme = SubResource( 11 )
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Panel"]
+margin_left = 15.0
+margin_top = 43.0
+margin_right = 401.0
+margin_bottom = 463.0
+theme = SubResource( 9 )
+custom_colors/line_number_color = Color( 1, 1, 1, 1 )
+custom_colors/background_color = Color( 0.129412, 0.2, 0.415686, 1 )
+custom_colors/current_line_color = Color( 0.223529, 0.309804, 0.568627, 1 )
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+wrap_enabled = true
+script = ExtResource( 3 )
+
+[node name="Slide" type="TextureButton" parent="CanvasLayer/Panel"]
+margin_left = 416.0
+margin_top = 141.0
+margin_right = 448.0
+margin_bottom = 197.0
+hint_tooltip = "Expand/Hide Editor"
+theme = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+
+[node name="Execute" type="TextureButton" parent="CanvasLayer/Panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 48.0
+margin_bottom = 28.0
+hint_tooltip = "Execute"
+theme = ExtResource( 5 )
+texture_normal = SubResource( 14 )
+texture_pressed = SubResource( 15 )
+texture_disabled = SubResource( 16 )
+
+[node name="Reset" type="TextureButton" parent="CanvasLayer/Panel"]
+margin_left = 59.0
+margin_top = 10.0
+margin_right = 97.0
+margin_bottom = 28.0
+hint_tooltip = "Reset"
+theme = ExtResource( 5 )
+texture_normal = SubResource( 17 )
+texture_pressed = SubResource( 18 )
+
+[node name="Stop" type="TextureButton" parent="CanvasLayer/Panel"]
+margin_left = 108.0
+margin_top = 10.0
+margin_right = 146.0
+margin_bottom = 28.0
+hint_tooltip = "Stop execution"
+theme = ExtResource( 5 )
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
+
+[node name="Validation" type="Panel" parent="CanvasLayer/Panel"]
+visible = false
+margin_left = 9.0
+margin_top = -115.0
+margin_right = 275.0
+margin_bottom = -4.0
+theme = SubResource( 41 )
+
+[node name="Ok" type="TextureButton" parent="CanvasLayer/Panel/Validation"]
+margin_left = 183.0
+margin_top = 88.0
+margin_right = 223.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+
+[node name="Cancel" type="TextureButton" parent="CanvasLayer/Panel/Validation"]
+margin_left = 235.0
+margin_top = 88.0
+margin_right = 275.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 18 )
+
+[node name="ValidationSprite" type="Sprite" parent="CanvasLayer/Panel/Validation"]
+position = Vector2( 135, 48 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Validation"]
+margin_left = -3.0
+margin_top = -10.0
+margin_right = 273.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 42 )
+text = "Do you really want to erase all your code?"
+autowrap = true
+
+[node name="SliderGlow" parent="CanvasLayer/Panel" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 436, 169 )
+z_index = 1
+
+[node name="PlayGlow" parent="CanvasLayer/Panel" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 27, 19 )
+
+[node name="StopGlow" parent="CanvasLayer/Panel" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 126, 19 )
+
+[node name="ResetGlow" parent="CanvasLayer/Panel" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 78, 19 )
+
+[node name="Journal" type="Panel" parent="CanvasLayer"]
+margin_left = 820.0
+margin_top = 191.0
+margin_right = 1280.0
+margin_bottom = 671.0
+theme = SubResource( 22 )
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Journal"]
+margin_left = 10.0
+margin_top = 38.0
+margin_right = 450.0
+margin_bottom = 468.0
+theme = SubResource( 32 )
+tab_align = 0
+
+[node name="Objectives" type="ScrollContainer" parent="CanvasLayer/Journal/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 36.0
+margin_bottom = -10.0
+
+[node name="ObjectiveEntries" type="VBoxContainer" parent="CanvasLayer/Journal/TabContainer/Objectives"]
+
+[node name="Dialogs" type="ScrollContainer" parent="CanvasLayer/Journal/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 36.0
+margin_bottom = -10.0
+theme = SubResource( 23 )
+scroll_horizontal_enabled = false
+
+[node name="DialogEntries" type="VBoxContainer" parent="CanvasLayer/Journal/TabContainer/Dialogs"]
+theme = SubResource( 20 )
+
+[node name="Documentation" type="ScrollContainer" parent="CanvasLayer/Journal/TabContainer"]
+visible = false
+margin_left = 10.0
+margin_top = 36.0
+margin_right = 300.0
+margin_bottom = 420.0
+
+[node name="DocumentationEntries" type="VBoxContainer" parent="CanvasLayer/Journal/TabContainer/Documentation"]
+
+[node name="ManaBar" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 844.0
+margin_top = 686.0
+margin_right = 1094.0
+margin_bottom = 706.0
+hint_tooltip = "Mana"
+theme = ExtResource( 5 )
+custom_styles/fg = SubResource( 43 )
+custom_styles/bg = SubResource( 44 )
+value = 100.0
+
+[node name="JournalToggle" type="Button" parent="CanvasLayer"]
+margin_left = 1212.0
+margin_top = 672.0
+margin_right = 1260.0
+margin_bottom = 720.0
+hint_tooltip = "Show/Hide journal"
+theme = SubResource( 27 )
+
+[node name="ExceptionCaught" type="Panel" parent="CanvasLayer"]
+visible = false
+margin_left = 232.0
+margin_right = 814.0
+margin_bottom = 110.0
+theme = SubResource( 34 )
+script = ExtResource( 13 )
+
+[node name="ErrorMessage" type="Label" parent="CanvasLayer/ExceptionCaught"]
+margin_left = 7.0
+margin_top = 6.0
+margin_right = 576.0
+margin_bottom = 82.0
+theme = SubResource( 38 )
+custom_fonts/font = SubResource( 39 )
+autowrap = true
+clip_text = true
+
+[node name="TutorialGlow" type="Node" parent="CanvasLayer"]
+script = ExtResource( 26 )
+
+[node name="Journal" parent="CanvasLayer/TutorialGlow" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 1237, 695 )
+
+[node name="Objectives" parent="CanvasLayer/TutorialGlow" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 1027, 240 )
+
+[node name="Documentation" parent="CanvasLayer/TutorialGlow" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 1180, 241 )
+
+[node name="Minimap" parent="CanvasLayer/TutorialGlow" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 1187, 695 )
+
+[node name="Minimap" type="MarginContainer" parent="CanvasLayer"]
+margin_left = 1000.0
+margin_top = -4.0
+margin_right = 1281.0
+margin_bottom = 162.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+script = ExtResource( 17 )
+
+[node name="Frame" type="NinePatchRect" parent="CanvasLayer/Minimap"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 276.0
+margin_bottom = 161.0
+texture = ExtResource( 23 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Minimap"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 276.0
+margin_bottom = 161.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Grid" type="TextureRect" parent="CanvasLayer/Minimap/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 251.0
+margin_bottom = 136.0
+texture = ExtResource( 19 )
+stretch_mode = 1
+
+[node name="Playermarker" type="Sprite" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+scale = Vector2( 0.366667, 0.366667 )
+texture = ExtResource( 25 )
+
+[node name="CheckpointMarkerOriginal" type="Sprite" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+visible = false
+texture = ExtResource( 20 )
+
+[node name="PanLeftButton" type="TextureButton" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+margin_left = -18.0
+margin_top = 48.0
+margin_right = -2.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 28 )
+texture_disabled = ExtResource( 32 )
+expand = true
+
+[node name="PanRightButton" type="TextureButton" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+margin_left = 233.0
+margin_top = 48.0
+margin_right = 249.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 31 )
+texture_disabled = ExtResource( 33 )
+expand = true
+
+[node name="PanUpButton" type="TextureButton" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+margin_left = 103.0
+margin_top = -18.0
+margin_right = 120.0
+margin_bottom = -1.0
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 35 )
+texture_disabled = ExtResource( 36 )
+expand = true
+
+[node name="PanDownButton" type="TextureButton" parent="CanvasLayer/Minimap/MarginContainer/Grid"]
+margin_left = 103.0
+margin_top = 117.0
+margin_right = 120.0
+margin_bottom = 134.0
+texture_normal = ExtResource( 38 )
+texture_pressed = ExtResource( 39 )
+texture_disabled = ExtResource( 37 )
+expand = true
+
+[node name="MinimapToggle" type="TextureButton" parent="CanvasLayer"]
+margin_left = 1162.0
+margin_top = 672.0
+margin_right = 1210.0
+margin_bottom = 720.0
+hint_tooltip = "Show/Hide map"
+theme = ExtResource( 5 )
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 22 )
+
+[node name="GridToggle" type="Button" parent="CanvasLayer"]
+margin_left = 1112.0
+margin_top = 672.0
+margin_right = 1160.0
+margin_bottom = 720.0
+hint_tooltip = "Show/Hide grid"
+theme = SubResource( 47 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/slide_panel_in_the_game = SubResource( 4 )
+anims/slide_panel_out_the_game = SubResource( 5 )
+
+[connection signal="pressed" from="CanvasLayer/Panel/Slide" to="." method="_on_Slide_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Execute" to="." method="_on_Execute_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Stop" to="." method="_on_Stop_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Validation/Ok" to="." method="_on_Ok_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/Validation/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalToggle" to="." method="_on_JournalToggle_pressed"]
+[connection signal="pressed" from="CanvasLayer/Minimap/MarginContainer/Grid/PanLeftButton" to="CanvasLayer/Minimap" method="_on_PanLeftButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Minimap/MarginContainer/Grid/PanRightButton" to="CanvasLayer/Minimap" method="_on_PanRightButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Minimap/MarginContainer/Grid/PanUpButton" to="CanvasLayer/Minimap" method="_on_PanUpButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Minimap/MarginContainer/Grid/PanDownButton" to="CanvasLayer/Minimap" method="_on_PanDownButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/MinimapToggle" to="." method="_on_MinimapToggle_pressed"]
+[connection signal="pressed" from="CanvasLayer/GridToggle" to="." method="_on_GridToggle_pressed"]

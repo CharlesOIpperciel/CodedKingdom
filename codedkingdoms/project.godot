@@ -1,0 +1,250 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "BasicCharacter",
+"language": "GDScript",
+"path": "res://Scripts/Player/BasicCharacter.gd"
+}, {
+"base": "Node",
+"class": "BinarySemaphore",
+"language": "GDScript",
+"path": "res://Scripts/Command/BinarySemaphore.gd"
+}, {
+"base": "Node",
+"class": "Challenge",
+"language": "GDScript",
+"path": "res://Scripts/Challenge.gd"
+}, {
+"base": "Area2D",
+"class": "Checkpoint",
+"language": "GDScript",
+"path": "res://Scripts/Checkpoint/Checkpoint.gd"
+}, {
+"base": "Node",
+"class": "Command",
+"language": "GDScript",
+"path": "res://Scripts/Command/Command.gd"
+}, {
+"base": "Node",
+"class": "CommandManager",
+"language": "GDScript",
+"path": "res://Scripts/Command/CommandManager.gd"
+}, {
+"base": "Command",
+"class": "DashingCommand",
+"language": "GDScript",
+"path": "res://Scripts/Command/Dashing.gd"
+}, {
+"base": "Command",
+"class": "Falling",
+"language": "GDScript",
+"path": "res://Scripts/Command/Falling.gd"
+}, {
+"base": "Command",
+"class": "IdleCommand",
+"language": "GDScript",
+"path": "res://Scripts/Command/Idle.gd"
+}, {
+"base": "Command",
+"class": "JumpingCommand",
+"language": "GDScript",
+"path": "res://Scripts/Command/Jumping.gd"
+}, {
+"base": "Command",
+"class": "Lambda",
+"language": "GDScript",
+"path": "res://Scripts/Command/Lambda.gd"
+}, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Scripts/Levels/Level.gd"
+}, {
+"base": "Control",
+"class": "MainMenu",
+"language": "GDScript",
+"path": "res://Scripts/MainMenu/Main_menu.gd"
+}, {
+"base": "Control",
+"class": "Settings_Pause",
+"language": "GDScript",
+"path": "res://Scripts/PauseMenu/Settings_Pause.gd"
+}, {
+"base": "Control",
+"class": "Settings_Tab_Container",
+"language": "GDScript",
+"path": "res://Scripts/Settings/Settings_Tab_Container.gd"
+}, {
+"base": "Command",
+"class": "TeleportCommand",
+"language": "GDScript",
+"path": "res://Scripts/Command/Teleport.gd"
+}, {
+"base": "Command",
+"class": "WalkingCommand",
+"language": "GDScript",
+"path": "res://Scripts/Command/Walking.gd"
+}, {
+"base": "Node",
+"class": "WinCondition",
+"language": "GDScript",
+"path": "res://Scripts/Checkpoint/WinCondition.gd"
+} ]
+_global_script_class_icons={
+"BasicCharacter": "",
+"BinarySemaphore": "",
+"Challenge": "",
+"Checkpoint": "",
+"Command": "",
+"CommandManager": "",
+"DashingCommand": "",
+"Falling": "",
+"IdleCommand": "",
+"JumpingCommand": "",
+"Lambda": "",
+"Level": "",
+"MainMenu": "",
+"Settings_Pause": "",
+"Settings_Tab_Container": "",
+"TeleportCommand": "",
+"WalkingCommand": "",
+"WinCondition": ""
+}
+
+[application]
+
+config/name="Codedkingdoms"
+run/main_scene="res://Scenes/LoadingScreen/LoadingScreen.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Scripts/Command/Global.gd"
+PanelGlobal="*res://Scripts/UI/Panel_Global.gd"
+SceneTransition="*res://Scenes/SceneTransition/SceneTransition.tscn"
+MainThemeMusic="*res://Scenes/Music/MainTheme.tscn"
+InGameThemeMusic1="*res://Scenes/Music/InGameTheme_1.tscn"
+CreditTheme="*res://Scenes/Music/CreditTheme.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="viewport"
+
+[gdnative]
+
+singletons=[ "res://pythonscript.gdnlib" ]
+
+[global]
+
+stretch=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_page_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_page_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_home={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_end={
+"deadzone": 0.5,
+"events": [  ]
+}
+enter_challenge={
+"deadzone": 0.5,
+"events": [  ]
+}
+test_action={
+"deadzone": 0.5,
+"events": [  ]
+}
+pan_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pan_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pan_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+pan_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[mono]
+
+project/assembly_name="Codedkingdoms 3 . 5 . 3"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

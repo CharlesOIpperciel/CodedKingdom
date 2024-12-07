@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Checkpoint/CheckpointManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Levels/LevelBluePrint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Prefabs/GrandWizard/GrandWizard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Levels/Level8/MapTP.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Levels/Level8/CheckpointTP.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Levels/Level_8/Level8.gd" type="Script" id=6]
+
+[node name="LevelTP" type="Node2D"]
+position = Vector2( -1, 1 )
+script = ExtResource( 6 )
+top_limit = -238
+right_limit = 5280
+
+[node name="BaseLevel" parent="." instance=ExtResource( 2 )]
+
+[node name="Checkpoints" parent="." instance=ExtResource( 5 )]
+script = ExtResource( 1 )
+
+[node name="Map" parent="." instance=ExtResource( 4 )]
+
+[node name="GrandWizard" parent="." instance=ExtResource( 3 )]
+wander_distance = 16.0

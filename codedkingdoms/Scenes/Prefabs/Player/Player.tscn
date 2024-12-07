@@ -1,0 +1,224 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Scripts/Command/CommandManager.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/MC_IDLE.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Player/BasicCharacter.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Player/MC_WALK.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Idle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Walking.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Jumping.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Lambda.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Falling.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Dashing.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Prefabs/Player/States/Teleport.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Prefabs/Player/CameraPan.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Player/Teleport.png" type="Texture" id=13]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 13 )
+region = Rect2( 128, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 160, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 13 )
+region = Rect2( 224, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 13 )
+region = Rect2( 224, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 13 )
+region = Rect2( 160, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 128, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=26]
+region = Rect2( 224, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=27]
+region = Rect2( 192, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=28]
+region = Rect2( 160, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=29]
+region = Rect2( 128, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=30]
+region = Rect2( 64, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=31]
+region = Rect2( 96, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=32]
+region = Rect2( 32, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=33]
+region = Rect2( 0, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 52 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 4 )
+region = Rect2( 160, 0, 32, 52 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"loop": true,
+"name": "Teleport1",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "Teleport2",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 7.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 7.0
+height = 30.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1, -26 )
+z_index = 1
+frames = SubResource( 6 )
+animation = "Teleport1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -22 )
+z_index = 1
+shape = SubResource( 7 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -89 )
+z_index = 3
+current = true
+zoom = Vector2( 0.33, 0.33 )
+limit_left = 0
+editor_draw_limits = true
+script = ExtResource( 12 )
+
+[node name="CommandManager" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Falling" parent="CommandManager" instance=ExtResource( 9 )]
+
+[node name="Idle" parent="CommandManager" instance=ExtResource( 5 )]
+
+[node name="Jumping" parent="CommandManager" instance=ExtResource( 7 )]
+
+[node name="Lambda" parent="CommandManager" instance=ExtResource( 8 )]
+
+[node name="Walking" parent="CommandManager" instance=ExtResource( 6 )]
+
+[node name="Dashing" parent="CommandManager" instance=ExtResource( 10 )]
+
+[node name="Teleport" parent="CommandManager" instance=ExtResource( 11 )]
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2( 0, -16 )
+enabled = true
+cast_to = Vector2( -10000, -16 )
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2( 0, -16 )
+enabled = true
+cast_to = Vector2( 10000, -16 )
+collision_mask = 2
+collide_with_areas = true

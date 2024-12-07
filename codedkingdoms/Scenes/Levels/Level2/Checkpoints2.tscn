@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Levels/Level_2/WinCondition.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Levels/Level_2/Wincondition2.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Prefabs/Levels/Checkpoints/Checkpoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Checkpoint/CheckpointManager.gd" type="Script" id=4]
+
+[node name="Checkpoints2" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Start" parent="." instance=ExtResource( 3 )]
+position = Vector2( 48, -32 )
+replenish_mana_amount = 200
+
+[node name="WinCondition" type="Node" parent="Start"]
+script = ExtResource( 1 )
+
+[node name="MidPoint" parent="." instance=ExtResource( 3 )]
+position = Vector2( 624, -32 )
+scene_index = 1
+replenish_mana_amount = 220
+
+[node name="WinCondition" type="Node" parent="MidPoint"]
+script = ExtResource( 2 )
+
+[node name="End" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1264, -32 )
+scene_index = 2
+replenish_mana_amount = 200

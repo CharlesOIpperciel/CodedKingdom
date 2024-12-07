@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Font/JetBrainsMono-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Font/alagard.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=21]
+size = 18
+extra_spacing_top = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 14
+font_data = ExtResource( 1 )
+
+[resource]
+ProgressBar/colors/font_color = Color( 1, 1, 1, 1 )
+ProgressBar/fonts/font = SubResource( 21 )
+TooltipLabel/colors/font_color = Color( 0.0823529, 0.0901961, 0.113725, 1 )
+TooltipLabel/fonts/font = SubResource( 20 )

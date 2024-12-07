@@ -1,0 +1,35 @@
+{
+    "level1": {
+        "c1": "Open your Journal.",
+        "c2": "Open your Editor.",
+        "c3": "Move 1 time to the right. (\"Play\" & \"Reset\" button)",
+        "c4": "Open your Map.",
+        "c5": "Move 2 times to the right.",
+        "c6": "Move 4 times to the right."
+    },
+    "level2": {
+        "c1": "Move 18 times to the right.",
+        "c2": "Reach the end of the room."
+    },
+    "level3": {
+        "c1": "Reach the checkpoint on the floor above."
+    },
+    "level4": {
+        "c1": "Reach the checkpoint on the fourth floor."
+    },
+    "level5": {
+        "c1": "Walk to the edge.",
+        "c2": "Teleport 2 blocks to the right.",
+        "c3": "Teleport 6 blocks to the right.",
+        "c4": "Teleport a distance equal to the sum of the 11 first numbers in the Fibonacci sequence to the right."
+    },
+    "level6": {
+        "c1": "Write the sum of the first 3 tiles into the last tile."
+    },
+    "level7": {
+        "c1": "Get to the 5th level of this room, on the rightmost tile. Use the number tiles to know when to jump."
+    },
+    "level8": {
+        "c1": "Get to the number tile that contains a 0. Number tiles containing -1 tell you to jump and walk left, and those with 1 tell you to jump and walk right."
+    }
+}

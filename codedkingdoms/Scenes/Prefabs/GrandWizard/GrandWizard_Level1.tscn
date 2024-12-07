@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Levels/Level_1/GrandWizard_Level1.gd" type="Script" id=1]
+
+[node name="GrandWizard_Level1" type="Node"]
+script = ExtResource( 1 )
+move_speed = 30.0
+wander_distance = 50.0

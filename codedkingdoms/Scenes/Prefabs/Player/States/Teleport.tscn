@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Command/Teleport.gd" type="Script" id=1]
+
+[node name="Teleport" type="Node"]
+script = ExtResource( 1 )
+
+[node name="FirstAnimationTimer" type="Timer" parent="."]
+wait_time = 1.15
+one_shot = true
+
+[node name="SecondAnimationTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="FirstAnimationTimer" to="." method="_on_FirstAnimationTimer_timeout"]
+[connection signal="timeout" from="SecondAnimationTimer" to="." method="_on_SecondAnimationTimer_timeout"]

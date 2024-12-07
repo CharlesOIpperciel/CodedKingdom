@@ -1,0 +1,170 @@
+{
+    
+    "congratulations": [
+        "Great job!",
+        "Excellent!",
+        "What a successful incantation!",
+        "I could not have done it better myself!" 
+    ],
+    "errors": {
+        "OutOfManaError" : "I'm out of mana!",
+        "StackOverFlowError" : "Too much recursion!",
+        "RanInAWallError" : "Running head first into a wall hurts!",
+        "FallError" : "Magic does not prevent gravity!",
+        "WrongArgumentError" : "Invalid argument used!"
+    }
+    ,
+    "level_1": {
+        "introduction" : [
+            "Greetings young apprentice, and welcome to the Kingdom. I am Refactorus, the Archmage.",
+            "The times are dire, as the evil wizard Segfoltos has corrupted our land, disrupting the delicate balance of Programagic in our world.",
+            "I am too old to restore it by myself, but I will share my knowledge with you, and together, we will find and defeat Segfoltos.",
+            "Are you ready to delve into the mysteries of Programagic?"
+        ],
+        "journal": [
+            "At all times, you can press on the journal icon to display your current objective.",
+            "This menu also contains useful documentation to help you in your mission.",
+            "Open the journal to continue."
+        ],
+        "slider": [
+            "Every action you will take here will be through incantations.",
+            "There is an arrow on the left of your screen. You can press it to display the window in which you will write your incantations.",
+            "Open the editor by clicking the arrow."
+        ],
+        "walking": [
+            "Let us first learn how to walk.",
+            "Open the incantations editor by pressing the arrow on the left of your screen. Place your cursor inside the editor and write the following on the first line: r = \"RIGHT\".",
+            "Then, write this on the second line: move(r)"
+        ],
+        "execute": [
+            "You can press the execute button to test your incantation.",
+            "Press the execute button now to move one tile to the right."
+        ],
+        "stop": [
+            "If you are executing your incantation, and you want to stop the execution and resume to the previous checkpoint, you can press the stop button."
+        ],
+        "reset": [
+            "If you have written too much code and you want to erase it all, you can press the reset button.",
+            "Press the reset button now. Do not worry, you will be prompted to validate before your incantation is deleted."
+        ],
+
+        "minimap": [
+            "There is a minimap that you can toggle by pressing the minimap icon.",
+            "Open the minimap now."
+        ],
+        "move_twice": [
+            "\"move()\" is a function. I encourage you to open the journal and read a little bit about functions if you want to better understand how they work.",
+            "Are you able to move 2 times to the right?"
+        ],
+        "move_4_times": [
+            "For now, I will tell you that the door to the next room is 4 tiles to the right.\nGood luck..."
+        ]
+    },
+    "level_2": {
+        "introduction" : [
+            "Now now, young apprentice, what if you need to cover a larger distance? Will you keep repeating yourself? Does it not seem tedious to you? Well it sure does to me...",
+            "I will teach you invaluable knowledge when it comes to repetitive incantations. It is a technique known as iteration...",
+            "One specific way to do iteration is what we call the \"for loop\"..."
+        ],
+        "for_loop": [
+            "To learn how to use the \"for loop\", open your journal and look at the documentation about for loops.",
+            "I can tell you that the next checkpoint is 18 tiles to the right."
+        ],
+        "distance_to_wall": [
+            "Excellent! I knew you could do it!",
+            "Now, to reach the end of this challenge, you need to get to the rightmost end of this room. In order to do so, I will teach you a new function.",
+            "The function's name is distance_to_wall(). Read in your journal to learn how to use it."
+        ],
+        "congratulations": [
+            "Congratulations, apprentice! See you in the next lesson."
+        ]
+    },
+    "level_3": {
+        "objective" : [
+            "Here, you will need to reach the exit of this room. It is located on the leftmost tile of the next floor.",
+            "There is a gap at the end of this floor that you can jump through to the next floor.",
+            "Here is a new function that you can use: jump(). You must give it a direction parameter, similar to the move() function.",
+            "There are three valid parameters: \"UP\", \"LEFT\", and \"RIGHT\".",
+            "You can find more detailed information in your journal.",
+            "Good luck!"
+        ],
+        "congratulations": [
+            "Excellent!"
+        ]
+    },
+    "level_4": {
+        "objective" : [
+            "Similar to the previous level, you will need to reach the exit of this room, which is on the fourth floor above.",
+            "Good luck!"
+        ],
+        "congratulations": [
+            "Excellent!"
+        ]
+    },
+    "level_5": {
+        "introduction": [
+            "Let's learn a little bit about booleans.",
+            "There is a new type of tile that you will be able to interact with: the number tile.",
+            "At any time, you can use the function \"on_number()\"",
+            "It returns a boolean value (True or False) to let you know if you are on a number tile.",
+            "You can use it in what we call an \"if statement\". Here is an example...",
+            "if on_number():\n\tmove(\"LEFT\")",
+            "You can also use them in a \"while loop\". Here is an example...",
+            "while not on_number():\n\t# do something",
+            "You can read more information about boolean operators to see how you can combine boolean values.",
+            "You may need to use if statements and while loops to get out of this room..."
+        ],
+        "objective": [
+            "The exit of this room is 5 levels above here, by the wall to the right.",
+            "To get there, you will need to jump to your right everytime you are on a number tile.",
+            "Good luck..."
+        ],
+        "congratulations": [
+            "Outstanding!"
+        ]
+    },
+    "level_6": {
+        "introduction": [
+            "Another thing that you can do if you are on a number tile is to read it.",
+            "You can read the value of any number tile by using the function \"read_number()\". It returns the value contained in this tile.",
+            "If you write \"number = read_number()\", then the \"number\" variable will contain the value of this number.",
+            "To get out of this room, you will need to find the tile that contains a 0.",
+            "To see if a number is equal to zero, you can use the \"==\" operator. It returns true if the elements on both sides are the same.",
+            "As an example, if you write\na = 5 == 5\nthen the variable \"a\" will contain True.",
+            "You can learn more about comparisons operators in the documentation tab of the journal."
+        ],
+        "objective": [
+            "The exit of this room is on a number tile that contains a 0.",
+            "To get there, you will need to jump to your right and then move to your right everytime you are on a number tile that contains a 1...",
+            "If the tile contains a -1, then you will need to jump to your left, and then walk to your left until the next number tile.",
+            "Good luck..."
+        ],
+        "congratulations": [
+            "Outstanding!"
+        ]
+    },
+    "level_7": {
+        "introduction": [
+            "Let us learn a little bit about numbers.",
+            "There are SOME tiles that you can also write numbers on.",
+            "In order to know if you can write a number on a number tile, use the \"can_write()\" function. It returns True or False",
+            "Finally, there is the \"write_number(number)\", function that will write the number passed in argument to the tile, if allowed."
+        ],
+        "objective": [
+            "There are 4 number tiles in front of you. You need to write the sum of the first 3 tiles into the last tile.",
+            "You also need to reach the checkpoint that is at the rightmost end of this room",
+            "Good luck..."
+        ],
+        "congratulations": [
+            "Outstanding!"
+        ]
+    },
+    "level_8": {
+        "introduction": ["Let's walk to the edge"],
+        "teleport_1": ["To cross this gap use the teleport() spell. You must give a distance and direction parameter like this: teleport(2,\"RIGHT\")"],
+        "teleport_2": ["The next checkpoint is 6 tiles away"],
+        "hard_part": ["The final checkpoint is very far away.",
+         "You must teleport a distance equal to the sum of the 11 first numbers in the Fibonacci sequence.",
+         "The Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones, the first two numbers are 0 and 1"]
+    }
+}

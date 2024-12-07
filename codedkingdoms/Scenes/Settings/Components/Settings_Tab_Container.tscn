@@ -1,0 +1,137 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Settings/Settings_Tab_Container.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GameUI/Buttons/BackNormal.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GameUI/Buttons/BackPressed.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GameUI/Buttons/BackHover.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameUI/Panels/Settings/SettingsPanelTheme.tres" type="Theme" id=5]
+[ext_resource path="res://Assets/Font/alagard.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scenes/Settings/Graphics/Window_Mode_Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Settings/Graphics/Resolution_Mode_Button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Music/Click_Sound.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Scenes/Settings/Audio/Audio_Slider_Settings.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[node name="Settings_Tab_Container" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_right = 2.0
+script = ExtResource( 1 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -361.0
+margin_top = -241.0
+margin_right = 368.0
+margin_bottom = 163.0
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 3 )
+
+[node name="Sound" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 33.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( -1043, -401 )
+custom_fonts/font = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Sound"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 100.0
+margin_right = -100.0
+margin_bottom = -100.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Sound/MarginContainer"]
+margin_right = 521.0
+margin_bottom = 167.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Sound/MarginContainer/ScrollContainer"]
+margin_bottom = 128.0
+custom_constants/separation = 64
+
+[node name="Master_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+bus_name = "Master"
+
+[node name="Music_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_bottom = 64.0
+bus_name = "Music"
+
+[node name="SFX_Slider_Settings" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 128.0
+margin_bottom = 128.0
+bus_name = "SFX"
+
+[node name="Graphics" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( -1043, -401 )
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Graphics"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 100.0
+margin_right = -100.0
+margin_bottom = -100.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Graphics/MarginContainer"]
+margin_right = 521.0
+margin_bottom = 168.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Graphics/MarginContainer/ScrollContainer"]
+margin_bottom = 86.0
+custom_constants/separation = 86
+
+[node name="Window_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+
+[node name="Resolution_Mode_Button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 86.0
+margin_bottom = 86.0
+
+[node name="Back button" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -113.0
+margin_right = 47.0
+margin_bottom = -61.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+bus = "SFX"

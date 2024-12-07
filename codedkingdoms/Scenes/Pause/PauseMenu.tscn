@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/GameUI/Buttons/SettingsNormal.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GameUI/Buttons/ResumeButtonPressed.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GameUI/Buttons/ResumeButtonHover.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GameUI/Buttons/ResumeButtonNormal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameUI/Buttons/SettingsPressed.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameUI/Buttons/SettingsHover.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameUI/Buttons/ExitNormal.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameUI/Buttons/ExitHover.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameUI/Buttons/ExitPressed.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameUI/Panels/InGamePause/IngamePausePanel.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/PauseMenu/PauseMenu.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Music/Click_Sound.mp3" type="AudioStream" id=12]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 325, 208 )
+
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.313726 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.5
+margin_top = -173.5
+margin_right = 248.5
+margin_bottom = 173.5
+size_flags_horizontal = 5
+size_flags_vertical = 5
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+pause_mode = 2
+margin_left = 120.0
+margin_top = 81.0
+margin_right = 376.0
+margin_bottom = 265.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 20
+
+[node name="Resume" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 48.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Settings" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 256.0
+margin_bottom = 116.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Exit" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+margin_top = 136.0
+margin_right = 256.0
+margin_bottom = 184.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

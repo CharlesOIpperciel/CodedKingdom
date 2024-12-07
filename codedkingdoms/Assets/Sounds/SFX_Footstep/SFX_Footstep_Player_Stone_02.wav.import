@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SFX_Footstep_Player_Stone_02.wav-f992e53702d0b65391d27fddfdd5c465.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/SFX_Footstep/SFX_Footstep_Player_Stone_02.wav"
+dest_files=[ "res://.import/SFX_Footstep_Player_Stone_02.wav-f992e53702d0b65391d27fddfdd5c465.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

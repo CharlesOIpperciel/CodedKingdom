@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Font/RetroGaming.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/NumberTile/NumberTile.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 13, 12 )
+
+[sub_resource type="Gradient" id=2]
+interpolation_mode = 2
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 2 )
+width = 32
+height = 32
+fill_from = Vector2( 0.5, 1 )
+fill_to = Vector2( 0.5, 0 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 7
+font_data = ExtResource( 1 )
+
+[node name="NumberTile" type="Area2D"]
+z_index = 2
+script = ExtResource( 2 )
+
+[node name="HitBox" type="CollisionShape2D" parent="."]
+position = Vector2( 16, -12 )
+shape = SubResource( 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 16, -12 )
+scale = Vector2( 0.8125, 0.757812 )
+texture = SubResource( 3 )
+color = Color( 0.917647, 0.0470588, 0.862745, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 2.0
+margin_top = -35.0
+margin_right = 32.0
+margin_bottom = -23.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+clip_text = true
+
+[connection signal="body_entered" from="." to="." method="_on_NumberTile_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_NumberTile_body_exited"]

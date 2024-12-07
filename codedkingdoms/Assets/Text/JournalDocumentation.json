@@ -1,0 +1,340 @@
+{
+    "Annotations": {
+        "name": "Annotating your code",
+        "description": "In Python, you can document your code using different means.",
+        "listing": {
+            "comments": {
+                "name": "Comments",
+                "description": "The most common way is to add comments to your code using the \"#\" symbol. Everything written after this symbol will not be interpreted as code.",
+                "snippet": [
+                    "# Here's an example",
+                    "length = 5  # And another one"
+                ]
+            }
+        }
+    },
+    "Variables": {
+        "name": "Storing data into variables",
+        "description": "In Python, variables are containers that store data. They can hold different types of information based on their data type. Variables can be used to store data that may change as the game progresses, such as the characters' position. You must be careful however as there are rules and standards to naming variables (A variable name cannot begin with a number or contain spaces for example).",
+        "listing": {
+            "integer": {
+                "name": "Integer",
+                "description": "Integer (int): Represents whole numbers.",
+                "snippet": [
+                    "age = 25",
+                    "",
+                    "# This would also be valid",
+                    "this_is_just_a_long_name_to_represent_age = 25"
+                ]
+            },
+            "float": {
+                "name": "Float",
+                "description": "Float (float): Represents decimal numbers.",
+                "snippet": [
+                    "height = 5.9"
+                ]
+            },
+            "boolean": {
+                "name": "Boolean",
+                "description": "Boolean (bool): Represents True or False.",
+                "snippet": [
+                    "is_alive = True"
+                ]
+            },
+            "string": {
+                "name": "String",
+                "description": "String (string): Represents a sequence of characters. Numbers can also be represented in strings, but keep in mind that arithmetic operators won't work the same.",
+                "snippet": [
+                    "name = \"Player\"",
+                    "",
+                    "x = \"8\"  # This is valid",
+                    "",
+                    "x / 2  # But this returns an error"
+                ]
+            }
+        }
+    },
+    "DataStructures": {
+        "name": "Defining more complex variables",
+        "description": "Python supports more complex data types like lists, dictionaries, and tuples to store collections of items. They usually serve as containers to hold a group of data. Like simpler data types, they also possess a pletora of functions you can use to perform actions on these types (sort(), append(), etc...). Be careful though, not every data type possesses the same functions you can apply to them.",
+        "listing": {
+            "list": {
+                "name": "List",
+                "description": "A list is an ordered collection of items that can be of any data type. Lists are defined with square brackets [ ] and are mutable, meaning you can change the items after creating the list.",
+                "snippet": [
+                    "inventory = [",
+                    "   \"sword\"," ,
+                    "   \"shield\",",
+                    "   \"potion\"",
+                    "]",
+                    "",
+                    "# Adds \"map\" to the list",
+                    "inventory.append(\"map\")",
+                    "",
+                    "# Lists start at index 0",
+                    "# Modify the value at index 0",
+                    "inventory[0] = \"axe\"",
+                    "",
+                    "# Store the new value in x",
+                    "x = inventory[0]",
+                    "",
+                    "# Insert \"bow\" at index 2",
+                    "inventory.insert(2, \"bow\")",
+                    "",
+                    "# Removes the first occurrence of \"bow\"",
+                    "inventory.remove(\"bow\")",
+                    "",
+                    "# Slicing a list",
+                    "sublist = inventory[0:1] # [\"sword\", \"shield\"]"
+                ]
+            },
+            "dictionnary": {
+                "name": "Dictionnary",
+                "description": "A dictionary is an unordered collection of key-value pairs, defined with curly braces { }. It is useful for storing information that you can access with a label instead of a position.",
+                "snippet": [
+                    "player_stats = {",
+                    "   \"health\": 100,",
+                    "   \"mana\": 50,",
+                    "   \"strength\": 10",
+                    "}",
+                    "",
+                    "# Modify a value",
+                    "player_stats[\"health\"] -= 10",
+                    "",
+                    "# Adding a new key-value pair",
+                    "player_stats[\"armor\"] = 20"
+                ]
+            },
+            "tuple": {
+                "name": "Tuple",
+                "description": "A tuple is an ordered, immutable collection, defined with parentheses ( ). Once created, you can't change the items in a tuple, making it useful for storing fixed data.",
+                "snippet": [
+                    "coordinates = (10, 20)",
+                    "",
+                    "x = coordinates[0] # You can access the data",
+                    "",
+                    "# But you cannot modify it",
+                    "coordinates[0] = 2  # Returns an error",
+                    "",
+                    "# Unpacking a tuple",
+                    "x1, y1 = coordinates # x1 = 10, y1 = 20"
+                ]
+            }
+        }
+    },
+    "Operators": {
+        "name": "Operators: Calculations and Comparisons",
+        "description": "Operators in Python are symbols or keywords that allow you to perform operations on variables and values. They are categorized into arithmetic, logical, and comparison operators. Arithmetic operators handle mathematical operations, while logical and comparison operators work with boolean values to form conditions in if statements or loops.",
+        "listing": {
+            "arithmetic": {
+                "name": "Arithmetic Operators",
+                "description": "Arithmetic operators allow you to perform basic mathematical calculations, such as addition, subtraction, multiplication, and division.",
+                "snippet": [
+                    "a = 10",
+                    "b = 3",
+                    "sum = a + b    # Addition (result: 13)",
+                    "diff = a - b   # Subtraction (result: 7)",
+                    "prod = a * b   # Multiplication (result: 30)",
+                    "quot = a / b   # Division (result: 3.333...)",
+                    "rem = a % b    # Modulus (Remainder of 10/3 = 1)",
+                    "pow = a ** b   # Exponentiation (10^3 = 1000)"
+                ]
+            },
+            "logical": {
+                "name": "Logical Operators",
+                "description": "Logical operators allow you to combine multiple conditions or check boolean values. They are essential in control flow statements like \"if statements\" and \"loops\".",
+                "snippet": [
+                    "is_alive = True",
+                    "has_weapon = False",
+                    "",
+                    "# Logical AND (result: False)",
+                    "can_attack = is_alive and has_weapon",
+                    "",
+                    "# Logical NOT (result: True)",
+                    "is_safe = not has_weapon",
+                    "",
+                    "# Logical OR (result: True)",
+                    "can_escape = is_alive or has_weapon"
+                ]
+            },
+            "comparison": {
+                "name": "Comparison Operators",
+                "description": "Comparison operators allow you to compare values, returning a boolean value.",
+                "snippet": [
+                    "a = 14",
+                    "b = 15",
+                    "c = 14",
+                    "",
+                    "# Equality operator",
+                    "are_equal = a == c # result: true",
+                    "",
+                    "# Inequality operator",
+                    "are_not_equal = a != b # result: true",
+                    "",
+                    "# Stricly smaller",
+                    "is_smaller = a < b # result: true",
+                    "",
+                    "# Smaller or equal",
+                    "is_smaller = a <= b # result: true",
+                    "",
+                    "# Stricly greater",
+                    "is_smaller = b > a # result: true",
+                    "",
+                    "# Greater or equal",
+                    "is_smaller = b >= a # result: true"
+                ]
+            }
+        }
+    },
+    "GameControls": {
+        "name": "Game controls and available actions",
+        "description": "These are predefined game methods that allow the player to control their character's movement and actions.",
+        "listing": {
+            "move": {
+                "name": "Move",
+                "description": "Moves the player in the specified direction. Valid directions are \"LEFT\" and \"RIGHT\". (Uses 10 points of Mana)",
+                "snippet": [
+                    "move(\"LEFT\")  # Moves the player 1 block to the left"
+                ]
+            },
+            "jump": {
+                "name": "Perform a jump",
+                "description": "Jump in the speecified direction. Valid directions are \"LEFT\", \"RIGHT\" and \"UP\". (Uses 20 points of Mana)",
+                "snippet": [
+                    "jump(\"UP\")  # Moves the player 1 block above"
+                ]
+            },
+            "teleport": {
+                "name": "Teleport the player",
+                "description": "Teleport in the specified distance and direction. Valid directions are \"LEFT\" and \"RIGHT\". (Uses 1000 points of Mana)",
+                "snippet": [
+                    "# Teleports the player 2 blocks to the right",
+                    "teleport(2, \"RIGHT\")"
+                ]
+            },
+            "distanceToWall": {
+                "name": "Find distance of player from a wall",
+                "description": "Returns the number (integer) of blocks between the player and the closest wall in the specified direction. Valid directions \"LEFT\" and \"RIGHT\".",
+                "snippet": [
+                    "distance_to_wall(\"RIGHT\")"
+                ]
+            },
+            "onNumber": {
+                "name": "Find if player is on a number tile",
+                "description": "Determines if the player is standing on a number tile or not. Returns a boolean.",
+                "snippet": [
+                    "on_number()"
+                ]
+            },
+            "canWrite": {
+                "name": "Find if player is on a writable number tile",
+                "description": "Determines if the player is standing on a writable number tile. Returns a boolean.",
+                "snippet": [
+                    "can_write()"
+                ]
+            },
+            "writeNumber": {
+                "name": "Write a value on a number tile",
+                "description": "Writes an integer value on the number tile the player is standing on and stores it.",
+                "snippet": [
+                    "write_number(34)"
+                ]
+            },
+            "readNumber": {
+                "name": "Read a value on a number tile",
+                "description": "Reads an integer value stored in the number tile the player is standing on.",
+                "snippet": [
+                    "read_number()"
+                ]
+            }
+        }
+    },
+    "Loops": {
+        "name": "Loops: Repeating statements",
+        "description": "Loops allow you to execute a block of code multiple times. They are useful for repeating actions without writing the same code repeatedly. In Python, there are two main types of loops: 'for' loops, which iterate over each item in a sequence, and 'while' loops, which continue as long as a specified condition is true. Loops are essential for handling tasks that require repetition, like processing items in a list or counting down to an event. The built-in function `range()` is often used with loops to generate a sequence of numbers, enabling controlled iteration over a specific range.",
+        "listing": {
+            "forLoops": {
+                "name": "\"For\" loops",
+                "description": "A for loop allows you to iterate over a sequence (like a list) and execute code for each item in the sequence. The `range()` function is frequently used with for loops to create a sequence of numbers, making it easy to repeat an operation a specific number of times.",
+                "snippet": [
+                    "inventory = [\"sword\", \"shield\", \"potion\"]",
+                    "",
+                    "for item in inventory:",
+                    "    print(f\"You have a {item}.\")",
+                    "",
+                    "# Repeat an operation a specific number of times",
+                    "for i in range(5):",
+                    "    move(\"RIGHT\")",
+                    "",
+                    "# Iterate over a sequence of numbers",
+                    "for number in range(1, 6):",
+                    "    print(f\"Counting: {number}\")"
+                ]
+            },
+            "whileLoops": {
+                "name": "\"While\" loops",
+                "description": "A while loop keeps running as long as a specified condition is True. Be careful with while loops, as they can create infinite loops if the condition never becomes False. Although `range()` is not typically used with while loops, you can combine it with manual iteration to achieve similar results.",
+                "snippet": [
+                    "countdown = 5",
+                    "while countdown > 0:",
+                    "    print(countdown)",
+                    "    countdown -= 1  # Decrease countdown by 1",
+                    "print(\"Liftoff!\")"
+                ]
+            }
+        }
+    },
+    "IfStatements": {
+        "name": "\"If\" statements: Logic control",
+        "description": "If statements allow you to execute code based on a condition, making it possible to add decision-making to scripts.",
+        "listing": {
+            "ifStatement": {
+                "name": "",
+                "description": "",
+                "snippet": [
+                    "# If",
+                    "if can_write():",
+                    "    write_number(34)",
+                    "else:",
+                    "   print(\"This is a read-only number tile\")",
+                    "",
+                    "# If-elif-else",
+                    "number = 15",
+                    "if number < 10:",
+                    "    print(\"Small number\")",
+                    "elif number < 20:",
+                    "    print(\"Medium number\")",
+                    "else:",
+                    "    print(\"Large number\")"
+                ]
+            }
+        }
+    },
+    "Functions": {
+        "name": "Defining functions: Structuring your code",
+        "description": "In Python, functions allow you to organize your code into reusable blocks. Functions can accept inputs, process them, and return outputs. They are essential for breaking down complex problems into smaller, more manageable parts, and help make code more readable and maintainable. Functions often make the code clearer, especially when giving meaningful names to the functions you define.",
+        "listing": {
+            "function": {
+                "name": "",
+                "description": "",
+                "snippet": [
+                    "def greet_player(name):",
+                    "    print(f'Hello, {name}!')",
+                    "",
+                    "greet_player('Player')  # Output: Hello, Player!",
+                    "",
+                    "def add(a, b):",
+                    "    return a + b",
+                    "",
+                    "result = add(5, 3)  # result = 8",
+                    "print(result)  # Output: 8"
+                ]
+            }
+        }
+    },
+    "More": {
+        "name": "Learning Python in-depth",
+        "description": "You can learn more about Python using different ressources openly available online (Python standard library)",
+        "listing": {}
+    }
+}
