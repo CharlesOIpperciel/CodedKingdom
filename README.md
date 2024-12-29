@@ -22,7 +22,7 @@
 Pour cloner ce dépôt via SSH, utilisez la commande suivante :
 
 ```bash
-git clone git@depot.dinf.usherbrooke.ca:dinf/projets/a24/eq12/codedkingdoms.git
+git@github.com:CharlesOIpperciel/CodedKingdom.git
 ```
 ## F.A.Q
 
