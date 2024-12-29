@@ -16,18 +16,14 @@
 - **Gestion Dynamique des Erreurs** : Feedback clair sur les erreurs de code.
 - **Défis Progressifs** : Enseignement intuitif des concepts de programmation.
 
-## Cloner le Dépôt
-**Assurez-vous d'avoir configuré vos clés SSH avec votre compte GitLab pour accéder au dépôt.**
-
-Pour cloner ce dépôt via SSH, utilisez la commande suivante :
-
-```bash
-git@github.com:CharlesOIpperciel/CodedKingdom.git
-```
-## F.A.Q
-
 ### **Why is the project all messed up on my Godot?**
 You **MUST** use **Godot 3.5.3** to ensure everything works correctly. Using a different version will NOT work.
+
+### This repository contains the codebase:
+You can open it via Godot 3.5.3 and run it there!
+
+### Final release of the game!
+https://github.com/xnubbeh/CodedKingdom/releases/tag/prototype
 
 ### Et voilà! 🎉
 Ton release est prêt. Bonne chance avec ton jeu!
