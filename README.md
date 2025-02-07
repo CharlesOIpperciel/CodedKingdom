@@ -25,10 +25,6 @@ You can open it via Godot 3.5.3 and run it there!
 ### Final release of the game!
 https://github.com/xnubbeh/CodedKingdom/releases/tag/prototype
 
-### Et voilà! 🎉
-Ton release est prêt. Bonne chance avec ton jeu!
-
-
 ## Contributeurs
 - Charles-Olivier Ipperciel
 - Alexandre Desfossés
